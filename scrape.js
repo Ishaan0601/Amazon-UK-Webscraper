@@ -37,7 +37,7 @@ async function scrape() {
   const priceNum = parseInt(price);
   product.price = priceNum;
   console.log(product);
-  //Send an SMS
+  //Send a message through Discord Webhook
   if ((product.stock.includes("in stock")) && (product.stock.includes("out of stock") == false)) {
     const embed = new EmbedBuilder()
 	    .setTitle(product.name)
